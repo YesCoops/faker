@@ -1,4 +1,5 @@
 import { Datatype } from './datatype';
+import { Lorem } from './lorem';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
 
@@ -174,7 +175,7 @@ export class Faker {
   // readonly iban = new (require('./iban'))(this);
   readonly image = new (require('./image'))(this);
   readonly internet = new (require('./internet'))(this);
-  readonly lorem = new (require('./lorem'))(this);
+  readonly lorem: Lorem = new Lorem(this);
   readonly music = new (require('./music'))(this);
   readonly name = new (require('./name'))(this);
   readonly phone = new (require('./phone_number'))(this);
