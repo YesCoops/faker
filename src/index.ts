@@ -1,6 +1,7 @@
 import { Datatype } from './datatype';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
+import { System } from './system';
 
 export interface FakerOptions {
   locales?: string[];
@@ -178,7 +179,7 @@ export class Faker {
   readonly music = new (require('./music'))(this);
   readonly name = new (require('./name'))(this);
   readonly phone = new (require('./phone_number'))(this);
-  readonly system = new (require('./system'))(this);
+  readonly system: System = new System(this);
   readonly time = new (require('./time'))(this);
   readonly vehicle = new (require('./vehicle'))(this);
   readonly word = new (require('./word'))(this);
