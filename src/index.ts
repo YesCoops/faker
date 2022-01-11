@@ -1,3 +1,4 @@
+import { Database } from './database';
 import { Datatype } from './datatype';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
@@ -165,7 +166,7 @@ export class Faker {
   readonly animal = new (require('./animal'))(this);
   readonly commerce = new (require('./commerce'))(this);
   readonly company = new (require('./company'))(this);
-  readonly database = new (require('./database'))(this);
+  readonly database: Database = new Database(this);
   readonly date = new (require('./date'))(this);
   readonly finance = new (require('./finance'))(this);
   readonly git = new (require('./git'))(this);
