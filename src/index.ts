@@ -1,3 +1,4 @@
+import { Commerce } from './commerce';
 import { Datatype } from './datatype';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
@@ -163,7 +164,7 @@ export class Faker {
 
   readonly address = new (require('./address'))(this);
   readonly animal = new (require('./animal'))(this);
-  readonly commerce = new (require('./commerce'))(this);
+  readonly commerce: Commerce = new Commerce(this);
   readonly company = new (require('./company'))(this);
   readonly database = new (require('./database'))(this);
   readonly date = new (require('./date'))(this);
