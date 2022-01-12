@@ -1,3 +1,4 @@
+import { Animal } from './animal';
 import { Datatype } from './datatype';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
@@ -162,7 +163,7 @@ export class Faker {
   datatype: Datatype = new Datatype(this);
 
   readonly address = new (require('./address'))(this);
-  readonly animal = new (require('./animal'))(this);
+  readonly animal: Animal = new Animal(this);
   readonly commerce = new (require('./commerce'))(this);
   readonly company = new (require('./company'))(this);
   readonly database = new (require('./database'))(this);
